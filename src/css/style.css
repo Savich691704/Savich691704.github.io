@@ -18,31 +18,20 @@ nav{
 	display: inline-block;
 	z-index: 10;
 }
-.white-btn::visited{
+/*
+.container {
+  max-width: 100%;
+  margin: auto;
+  height: 100%;
+}
+*/
+.btn_nav:visited{
 	color: #fff;
 }
-@media(max-width: 991px){
-	.title_container, .title_container h4, .title_container input{
-		color: #fff;
-	}
-	.title_bg{
-
-	}
-	.title_bg::after{
-
-	}
+.btn_nav{
+	color: #fff;
+	background: ##2B0C73FF;
 }
-
-
-.co{
-	border: 1px solid red;
-}
-
-
-
-
-
-
 .logo{
 	color: #fff;
 	font-size: 24px;
@@ -125,22 +114,16 @@ nav{
 .white-btn:visited{
 	color: #fff;
 }
-.white-btn a::after{
-	content: "";
-	color: #fff;
-}
 .title_bg{
-	width: 100%;
+	max-width: 100%;
 	height: 100%;
-
 	background: url(../img/boy.png) 95% 100%/auto 85% no-repeat, url(../img/bgMain.jpg) center / cover no-repeat;
 /*
 	background-image: url(../img/boy.png);
 	background-position: bottom right;
 	background-size: 42%;
 	background-repeat: no-repeat;
-	position: absolute;
-	*/
+		*/
 }
 
 
@@ -172,16 +155,15 @@ nav{
 	}
 }
 .title_container{
-	float: left;
+	width: 100%;
+	padding-top: 20%;
 	color: #2c384a;
 	text-align: center;
 	opacity: 0;
-	width: 100%;
-
-
+	margin-top: 10%;
+	
 	animation: titil_move 1s ease forwards;
 	animation-delay: 2s;
-
 }
 .title_container h1{
 	font-family: 'Arial', sans-serif;
@@ -200,7 +182,6 @@ nav{
 	color: #79818d;
 	border: 2px solid #79818d;
 	border-radius: 5px;
-	margin: 7px;
 	padding: 7px 10px 10px 7px;
 	background: #fff;
 
@@ -224,6 +205,23 @@ nav{
 		margin-left: 0px;
 	}
 }
+@media (max-width: 991px){
+	.title_container, .title_container h4, .title_container input{
+		color: #fff;
+	}
+	.title_bg{
+		position: relative;
+	}
+	.title_bg:after{
+		content: "";
+		bottom: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		background: rgba(0,0,0,0.4);
+		position: absolute;
+	}
+}
 
 /* aboutMe */
 .aboutMe{
@@ -235,7 +233,6 @@ nav{
 .aboutMe p{
 	display: inline-block;
 	text-align: center;
-	margin: 20px;
 }
 .aboutMe_flex{
 	display: flex;
@@ -278,7 +275,6 @@ nav{
 	background: #fff;
 }
 .button_aboutMe:active{
-	content: "";
 	background: ##6f707e;
 	transform: scale(1.2);
 }
@@ -300,29 +296,28 @@ nav{
 	text-align: center;
 	background: url(../img/bgICan.jpg)  center / cover no-repeat;
 
-
 	animation-delay: 0.5s
 	transform: rotate3d(180);
 }
-.container_aboutMe h6{
+.container_iCan h6{
 	font-size: 20px;
 	font-family:  'Franklin Gothic', sans-serif;
 	text-align: center;
 	color: #cf7600;
 	padding: 10px;
 }
-.container_aboutMe h3{
+.container_iCan h3{
 	display: inline-block;
 	margin-top: 110px;
 }
-.container_aboutMe img{
+.container_iCan img{
 	margin-top: 100px;
 	transition: all 0.6s;
 }
-.container_aboutMe img:hover{
+.container_iCan img:hover{
 	transform: rotateY(360deg);
 }
-.container_aboutMe span{
+.container_iCan span{
 	font-family:  'Calibri', sans-serif;
 	font-size: 16px;
 	animation: shift_p 4s ease forwards;
@@ -338,11 +333,27 @@ nav{
 		margin-right: 0px;
 	}
 }
+@media max-width: 991px){
+	.iCan{
+		padding-top: 10px;
+	}
+	.container_iCan img, .container_iCan h3{ 
+		margin-top: 10px;
+	}
+}
+@media (max-width: 1399px){
+	.iCan{
+		padding-top: 60px;
+	}
+	.container_iCan img, .container_iCan h3{
+		margin-top: 10px;
+	}
+}
 /* cases */
 .cases{
 	width: 100%;
 	height: 1965px;
-	text-align: left;
+	text-align: center;
 	padding-top: 160px;
 }
 .cases h5{
@@ -356,8 +367,7 @@ nav{
 .contanerCases1 h6{
 	color: #384354;
 	font-size: 20px;
-	line-height: 28px;
-
+	line-height: 24px;
 }
 .contanerCases2{
 	float: right;
@@ -568,9 +578,6 @@ select{
 }
 .containerContacts input{
 	width: 100%;
-
-
-	
 }
 .containerContacts button{
 	width: 100%;
@@ -581,12 +588,10 @@ select{
 	color:  #f9faff;
 }
 .containerContacts button:hover{
-	content: "";
 	background-color: transparent;
 	color:  #fff;
 }
 .containerContacts button:active{
-	content: "";
 	transform: scale(0.8);
 }
 .containerContacts h4{
@@ -599,6 +604,7 @@ select{
 }
 .containerContacts textarea{
 	width: 100%;
+	height: 70px;
 }
 .containerContact{
 	display: inline-block;
