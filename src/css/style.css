@@ -32,6 +32,17 @@ nav{
 	color: #fff;
 	background: ##2B0C73FF;
 }
+.co{
+	border: 1px solid red;
+}
+.co1{
+	border: 1px solid white;
+}
+
+
+
+
+
 .logo{
 	color: #fff;
 	font-size: 24px;
@@ -435,7 +446,7 @@ select{
 .statistics{
 	display: inline-block;
 	width: 100%;
-	height: 500px;
+	height: 100%;
 	background: # #344051;
 	background: url(../img/bgsSatistics.jpg) center / cover no-repeat;
 	/*
@@ -521,7 +532,7 @@ select{
 		transform: scale(1);
 	}
 }
-@media (max-width: 994px){
+@media (max-width: 991px){
 	.statistics{
 		padding-top: 10px;
 	}
@@ -530,7 +541,7 @@ select{
 .reviews{
 	display: inline-block;
 	width: 100%;
-	height: 560px;
+	height: auto;
 	padding-top: 100px;
 	text-align: center;
 }
@@ -566,21 +577,21 @@ select{
 .contacts{
 	display: inline-block;
 	width: 100%;
-	height: 815px;
+	height: 100%;
 	text-align: center;
 	padding-top: 100px;
 	color: #fff;
 	background: url(../img/bgContacts.jpg) center / cover no-repeat;
 }
-.containerContacts{
-
+@media (max-width: 991px){
+	.contacts{
+		padding-top: 10px;
+	}
 }
 .contacts h3{
-
 	color: #fff;
 }
 .contacts span{
-	text-align: center;
 	color: #fff;
 }
 .containerContacts input,
@@ -599,7 +610,6 @@ select{
 }
 .containerContacts button{
 	width: 100%;
-
 	font-size: 20px;
 	text-transform: uppercase;
 	background-color: #6f85a6;
@@ -635,7 +645,7 @@ select{
 }
 .location{
 	width: 100%;
-	height: 350px;
+	height: auto;
 	background: url(../img/bglocation.jpg) center / cover no-repeat;
 	text-align: center;
 }
