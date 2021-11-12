@@ -32,6 +32,38 @@ $(document).ready(function(){
 		observer.observe(el);
 	});
 
+	options = {threshold:[0.5]};
+	observer = new IntersectionObserver(iCan_img_anime, options);
+	elements = $('.iCan_img_anime');
+	elements.each((i, el) => {
+		observer.observe(el);
+	});
+
+	options = {threshold:[0.5]};
+	observer = new IntersectionObserver(number_120, options);
+	elements = $('.number_120');
+	elements.each((i, el) => {
+		observer.observe(el);
+	});
+		options = {threshold:[0.5]};
+	observer = new IntersectionObserver(number_4600, options);
+	elements = $('.number_120');
+	elements.each((i, el) => {
+		observer.observe(el);
+	});
+		options = {threshold:[0.5]};
+	observer = new IntersectionObserver(number_340, options);
+	elements = $('.number_120');
+	elements.each((i, el) => {
+		observer.observe(el);
+	});
+		options = {threshold:[0.5]};
+	observer = new IntersectionObserver(number_23, options);
+	elements = $('.number_120');
+	elements.each((i, el) => {
+		observer.observe(el);
+	});
+
 // Type Image Zoom - картинка с анимацией
 $('.image-popup-zoom').magnificPopup({
 	type: 'image',
@@ -41,69 +73,30 @@ $('.image-popup-zoom').magnificPopup({
  }
 });
 
-// всалывающее окно через 10 сек
-/*
-var cookieOptions = { expires: 3, path: '/' };
-
-    setTimeout(function() {
-    $.magnificPopup.open({
-    items: {
-    src: $('#text-popup-load-window'), // может быть HTML строкой, jQuery объектом, или CSS селектором 
-    },
-    type: 'inline',
-    removalDelay: 300
-    });
-  }, 10000);
-
-  */
-/*
-function call()
-        {
-        	popup = $('#myModal')
-           // popup = window.open('http://www.google.co.in');         
-        }
-
-        setTimeout(call, 8000);
-        */
-
 // всалывающее окно через 30 сек 
 setTimeout(function(){
-	let result = confirm("Привет!\nМы хотим с выми дружить...\nВас устроит скидка 50% на разработку первого сайта?");
-	if(result){ MessageEmail(); }
+	$('.hideBtn').click();
 },30000)
-/*
-setTimeout(function(){
-
-  $('.offcanvas').show();
-},1000)
-*/
-
 
 });// end ready
 //*********************************************************
-
-function modalWindow(){
-	$("#getCodeModal").modal('show');
-};
 
 // отложенная анимация
 function onEntry(entry){
 	entry.forEach (change => {
 		if (change.isIntersecting){
-			change.target.classList.add('.show-animation');
+			change.target.classList.add('show-animation');
 		}
 	})
 };
-// всалывающее окно через 30 сек 
-function MessageEmail(){
-	let email_adress = prompt("Да!\nОставте свой email и мы отправим вам образцы наших работ, чтобы вам было легче выбрать дизайн и тип сайта, а так же priceList. Долго ждать не придется ;)");
+function iCan_img_anime(entry){
+	entry.forEach (change => {
+		if (change.isIntersecting){
+			change.target.classList.add('show-animation');
+		}
+	})
+};
 
-	if(email_adress != ""){
-			//код отправки на почту
-			console.log('email_adress = ' + email_adress);
-			aletr(`На вашу почту ${email_adress} в ближайшее время будут отправоенны все материалы.\nРады с Вами сотрудничать!`);
-		};
-	}
 // каклькулятор
 let priseTypeSite = 0,
 priseDesign = 0,
@@ -187,9 +180,18 @@ $('#btnSendRequest').click(function(){
 		\nна электронный адрес ${email_adress}, ближайшее время будут отправоенны образцы оформления сайта и другая информация. Благодапим Вас за обращение к нам! Рады сотрудничать!`);
 })
 // модальное окно для отправить заявку end
+//  Modal через 30 сек 
+$('#btnSendFirstModal').click(function(){
+	let user_name_firstModal = document.firstModal_form.user_name_firstModal.value;
+	let email_adress_firstModal = document.firstModal_form.email_adress_firstModal.value;
 
+	$('#firstModal').modal('hide');
+	alert(`${user_name_firstModal},
+		\nна электронный адрес ${email_adress_firstModal}, ближайшее время будут отправоенны образцы оформления сайта и другая информация. Благодапим Вас за обращение к нам! Рады сотрудничать!`);
+})
 // statistic number
-$(function() {
+function number_120(){
+	$(function() {
 	$({numberValue: 0}).animate({numberValue: 120}, {
 			duration: 1000, // Продолжительность анимации, где 500 = 0,5 одной секунды, то есть 500 миллисекунд
 			easing: "linear",
@@ -197,9 +199,11 @@ $(function() {
 				$(".number_120").html(Math.ceil(val)); // Блок, где необходимо сделать анимацию
 			}
 		});
-
 });
-$(function() {
+};
+
+function number_4600(){
+	$(function() {
 	$({numberValue: 0}).animate({numberValue: 4600}, {
 			duration: 1000, // Продолжительность анимации, где 500 = 0,5 одной секунды, то есть 500 миллисекунд
 			easing: "linear",
@@ -207,9 +211,11 @@ $(function() {
 				$(".number_4600").html(Math.ceil(val)); // Блок, где необходимо сделать анимацию
 			}
 		});
-
 });
-$(function() {
+};
+
+function number_340(){
+	$(function() {
 	$({numberValue: 0}).animate({numberValue: 340}, {
 		duration: 1000, 
 		easing: "linear",
@@ -217,9 +223,11 @@ $(function() {
 			$(".number_340").html(Math.ceil(val)); 
 		}
 	});
-
 });
-$(function() {
+};
+
+function number_23(){
+	$(function() {
 	$({numberValue: 0}).animate({numberValue: 23}, {
 			duration: 500, // Продолжительность анимации, где 500 = 0,5 одной секунды, то есть 500 миллисекунд
 			easing: "linear",
@@ -227,13 +235,5 @@ $(function() {
 				$(".number_23").html(Math.ceil(val)); // Блок, где необходимо сделать анимацию
 			}
 		});
-
 });
-
-
-
-
-
-
-
-
+};
