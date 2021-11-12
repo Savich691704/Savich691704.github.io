@@ -117,25 +117,25 @@
 						<div class="col-xxl-3 offset-xxl-0 col-lg-4 offset-lg-2 d-none d-lg-block mt-5">
 							<img src="img/imgICan1.png" class="iCan_img_anime" alt="изображение не найдено">
 							<h6>Веб-дизайн</h6>
-							<span class="iCan_p_anime">Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam. </span>
+							<span>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam. </span>
 						</div>
 
 						<div class="col-xxl-3 col-lg-4 d-none d-lg-block mt-5">
-							<img src="img/imgICan2.png" alt="изображение не найдено">
+							<img src="img/imgICan2.png" class="iCan_img_anime" alt="изображение не найдено">
 							<h6>Разработка</h6>
-							<span class="iCan_p_anime">Lorem ipsum dolor sit amet placert facilisis mi in tempus eleifend pellentesque. </span>
+							<span>Lorem ipsum dolor sit amet placert facilisis mi in tempus eleifend pellentesque. </span>
 						</div>
 
 						<div class="col-xxl-3 offset-xxl-0 col-lg-4 offset-lg-2 d-none d-lg-block mt-5">
-							<img src="img/imgICan3.png" alt="изображение не найдено">
+							<img src="img/imgICan3.png" class="iCan_img_anime" alt="изображение не найдено">
 							<h6>СЕО-Оптимизация</h6>
-							<span class="iCan_p_anime">Lorem ipsum dolor sit amet placeratfacilisis felis mi in tempus eleifend pellentesque natoque etiam.</span>
+							<span>Lorem ipsum dolor sit amet placeratfacilisis felis mi in tempus eleifend pellentesque natoque etiam.</span>
 						</div>
 
 						<div class="col-xxl-3 col-lg-4 d-none d-lg-block mt-5">
-							<img src="img/imgICan4.png" alt="изображение не найдено">
+							<img src="img/imgICan4.png" class="iCan_img_anime" alt="изображение не найдено">
 							<h6>Маркетинг</h6>
-							<span class="iCan_p_anime">Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque.</span>
+							<span>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque.</span>
 						</div>
 					</div>
 
@@ -323,14 +323,6 @@
 				</div>
 			</div>
 		</section>
-
-		<!-- modal window Оставить заявку -->
-		<!-- Button trigger modal 
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
--->
-
 <!-- statistics -->
 <section>
 	<div class="section statistics">
@@ -542,21 +534,36 @@
 		</div>
 	</div>
 </div>
-<!-- Modal через 30 сек 
-<div id="getCodeModal">
+<!-- Modal через 30 сек -->
+<button type="button" class="btn btn-primary hideBtn" data-bs-toggle="modal" data-bs-target="#firstModal">
+  Launch demo modal
+</button>
 
+<div class="modal firstModal" id="firstModal" tabindex="-1" aria-labelledby="firstModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<h5 class="text-center">Заполните форму и мы отправим вам образцы наших работ, чтобы вам было легче выбрать дизайн и тип сайта, а так же priceList.<br>Долго ждать не придется ;)</h5>
+				<form name="firstModal_form">
+					<div class="form-group">
+						<label for="user_name_firstModal" class="col-form-label">Имя</label>
+						<input type="text" class="form-control" name="user_name_firstModal">
+					</div>
+					<div class="form-group">
+						<label for="email_adress_firstModal" class="col-form-label">Email</label>
+						<input type="email" class="form-control" name="email_adress_firstModal">
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" id="btnSendFirstModal" class="btn btn-info">Отправить</button>
+			</div>
+		</div>
+	</div>
 </div>
-
--->
-<div class="block-popup">
-	<h3>Оставьте свой Email, чтобы не пропускать новых выпусков</h3>
-	<form>
-		<input type="email" placeholder="Введите email" name="email-popup"/>
-		<input type="button" name="btn-form-popup" value="Отправить"/>
-	</form>
-	<span>&times;</span>
-</div>
-<div class="overlay"></div>
 
 
 <script src="js/jquery-3.6.0.min.js"></script>
