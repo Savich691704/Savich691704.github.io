@@ -70,7 +70,7 @@ function call()
 setTimeout(function(){
 	let result = confirm("Привет!\nМы хотим с выми дружить...\nВас устроит скидка 50% на разработку первого сайта?");
 	if(result){ MessageEmail(); }
-},3000)
+},30000)
 /*
 setTimeout(function(){
 
